@@ -22,7 +22,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'J.A.T.E'
       }),
 
       new InjectManifest({
@@ -31,22 +31,22 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
-        // fingerprints: false,
-        // inject: true,
-        // name: 'Contact Cards',
-        // short_name: 'Contact',
-        // description: 'Never forget your contacts!',
-        // background_color: '#225ca3',
-        // theme_color: '#225ca3',
-        // start_url: './',
-        // publicPath: './',
-        // icons: [
-        //   {
-        //     src: path.resolve('src/images/logo.png'),
-        //     sizes: [96, 128, 192, 256, 384, 512],
-        //     destination: path.join('assets', 'icons'),
-        //   },
-        // ],
+        fingerprints: false,
+        inject: true,
+        name: 'J.A.T.E',
+        short_name: 'JATE',
+        description: 'Just another text editor',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: './',
+        publicPath: './',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
       }),
     ],
 
@@ -59,7 +59,6 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
-          // We use babel-loader in order to use ES6.
           use: {
             loader: 'babel-loader',
             options: {
