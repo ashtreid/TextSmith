@@ -1,4 +1,5 @@
 const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
+// const { setDefaultHandler } = require('workbox-routing');
 const { CacheFirst } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
 const { CacheableResponsePlugin } = require('workbox-cacheable-response');
@@ -21,6 +22,12 @@ const pageCache = new CacheFirst({
 
 warmStrategyCache({
   urls: ['/index.html', '/'],
+  strategy: pageCache,
+});
+
+offlineFallback({
+  // fallBackURL: '/offline.html',
+  fallBackURL: '/index.html',
   strategy: pageCache,
 });
 

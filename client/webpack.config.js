@@ -12,13 +12,17 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      editor: './src/js/editor.js',
-      header: './src/js/header.js'
+      // editor: './src/js/editor.js',
+      // header: './src/js/header.js'
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
+    devServer: {
+      hot: 'only',
+    },
+
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
