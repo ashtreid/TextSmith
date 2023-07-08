@@ -9,3 +9,6 @@ If you're lookin' to dive into the code and see what makes this editor tick, hea
 
 ---
 There you have it, my friend. Enjoy using this text editor and may your code flow like the mighty river.
+
+
+![jate screenshot](/jate-sample.png)
